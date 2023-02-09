@@ -1,0 +1,42 @@
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.11'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.4.0'
+    implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
+    implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/com/company']
+        }
+        resources {
+            srcDirs = ['src/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['tst/com/company']
+        }
+    }
+}
+
+
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
