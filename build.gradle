@@ -3,6 +3,9 @@ plugins {
     id 'java'
 }
 
+project.group = 'com.company.team'
+project.version ='1.0.0'
+
 repositories {
     mavenCentral()
 }
@@ -12,6 +15,7 @@ dependencies {
     implementation 'org.junit.jupiter:junit-jupiter-engine:5.4.0'
     implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
     implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
+    implementation 'com.company.team:exampleSchedulingModel'
 }
 
 sourceSets {
