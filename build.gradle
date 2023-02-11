@@ -12,9 +12,14 @@ repositories {
 
 dependencies {
     implementation 'junit:junit:4.11'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.1.1'
+
+
     implementation 'org.junit.jupiter:junit-jupiter-engine:5.4.0'
     implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
     implementation 'org.junit.vintage:junit-vintage-engine:5.4.0'
+    implementation 'javax.inject:javax.inject:1'
+
     implementation 'com.company.team:exampleSchedulingModel'
 }
 
